@@ -28,6 +28,7 @@
       /* Styles for the page */
       body {
         font-family: Arial;
+        text-align: center;
         .transform(translateZ(0)); /* prevent flashing*/
       }
       .main {
@@ -36,22 +37,22 @@
           text-align: center;
       }
       img {
-          height: 100px;
+          height: 10vh;
       }
       h1 {
           margin-bottom: 0;
-          font-size: 50px;
+          font-size: 2vw;
       }
       .periodic {
         position: relative;
-        height: 200px;
+        height: 70vh;
         margin-right: -1px;
         text-shadow: none;
       }
 
       .periodic-row {
         clear: both;
-          height: 10%;
+        height: 10%;
       }
 
       .cell {
@@ -188,7 +189,6 @@
       // small tablet portrait */
       @media (min-width: 600px) {
         .periodic {
-          height: 460px;
           margin-right: -2px;
         }
         
@@ -217,7 +217,7 @@
       /* tablet landscape or small laptop */
       @media (min-width: 800px) {
         .periodic {
-          height: 540px;
+          
         }
 
         .symbol {
@@ -227,10 +227,7 @@
 
       /* normal screen */
       @media (min-width: 992px) {
-        .periodic {
-          height: 680px;
-        }
-        
+      
         .at_num,
         .at_weight {
           font-size: 10px;
@@ -243,9 +240,6 @@
 
       /* large screen */
       @media (min-width: 1200px) {
-        .periodic {
-          height: 800px;
-        }
         
         .at_num,
         .at_weight {
@@ -259,7 +253,6 @@
     </style>
   </head>
   <body>
-    <div class="main">
         <h1>Periodic Table - Dimitri Mendeleïev </h1>
         <img src="https://o.b5z.net/i/u/6026327/i/WVW1330-1.jpg" alt="Embellishment">
         <div class="periodic" contenteditable="true">
@@ -927,14 +920,14 @@
             <div class="cell">
             <div class="element">
                 <div class="at_num">117</div>
-                <div class="symbol">Uus</div>
+                <div class="symbol">Ts</div>
                 <div class="at_weight">[294]</div>
             </div>
             </div>
             <div class="cell">
             <div class="element">
                 <div class="at_num">118</div>
-                <div class="symbol">Uuo</div>
+                <div class="symbol">Og</div>
                 <div class="at_weight">[294]</div>
             </div>
             </div>
@@ -1162,6 +1155,5 @@
         </div>
         <div style="clear: both;"></div>
         </div>
-    </div>
   </body>
 </html>
