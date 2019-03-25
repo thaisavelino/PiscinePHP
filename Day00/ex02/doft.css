@@ -2,6 +2,11 @@ body {
 	background-color: #505050;
 }
 
+.main{
+	width: 1500px;
+	margin: auto;
+}
+
 .tout {
 	padding-top: 10px;
 	width: 1420px;
@@ -118,7 +123,7 @@ body {
 	float: left;
 }
 
-.img {
+.gay {
 	width: 70px;
 	margin-bottom: 10px;
 }
