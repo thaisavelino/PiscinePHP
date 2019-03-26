@@ -1,6 +1,7 @@
 #!/usr/bin/php
-<?php
+<?php 
     unset($argv[0]);
-    foreach($argv as $v)
-        echo $v."\n";
+    foreach ($argv as $k=>$v) {
+        print("$v\n");
+   }
 ?>
