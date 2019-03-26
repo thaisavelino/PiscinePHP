@@ -1,9 +1,13 @@
 #!/usr/bin/php
-<?php
-    if ($argc == 2) 
+<?PHP
+    if ($argc == 2)
     {
-        $array = explode(' ', $argv[1]);
-        $res = implode(" ", $array);    
-        echo "$res\n";
+        function epur($str)
+        {
+            $str = trim($str);
+            $str = preg_replace('/\s+/', ' ', $str);
+            return ($str);
+        }
+        echo epur($argv[1])."\n";
     }
 ?>
