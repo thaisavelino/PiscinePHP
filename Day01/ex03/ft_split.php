@@ -10,6 +10,6 @@
             $yo[] = $elem;
         }
         unset($ret);
-        return $yo;
+        return $ret;
     }
 ?>
