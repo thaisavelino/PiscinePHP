@@ -9,7 +9,7 @@
 			$word[] = $elem;
     }
     for ($i = 1; $i < count($word); $i++) {
-        echo "$word[$i]\n";
+        echo "$word[$i] ";
     }
     echo "$word[0]\n";
 ?>
