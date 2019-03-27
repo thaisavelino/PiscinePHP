@@ -36,7 +36,7 @@ function ft_parse_do_op($str){
         $a = trim($num[0]);
         $b = trim($num[1]);
         if (is_numeric($a) && is_numeric($b)) {
-            do_op($a, $b, $op);
+                do_op($a, $b, $op);
         } else {
             echo "Syntax Error\n";
             exit(1);
@@ -45,6 +45,9 @@ function ft_parse_do_op($str){
 }
 // operation 
 function do_op($a, $b, $op){
+    if (($op == "/" || $op == "%") && $b == 0) {
+        exit ;
+    }
     switch ($op) {
         case '+':
             print($a+$b);
