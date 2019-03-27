@@ -5,6 +5,9 @@ if ($argc == 4) {
     $a = trim($argv[1]);
     $o = trim($argv[2]);
     $b = trim($argv[3]);
+    if (($o == "/" || $o == "%") && $b == 0) {
+        exit ;
+    }
     switch ($o) {
         case '+':
             print($a+$b);
