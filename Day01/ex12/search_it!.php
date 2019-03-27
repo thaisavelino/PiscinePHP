@@ -3,7 +3,7 @@
 	if ($argc >= 3) {
         $key = $argv[1];
 		for ($i = 2; $i < $argc; $i++) {
-            //spread key and value from : 
+            //spread key and value from :
             $dots = strpos($argv[$i], ":");
 			if ($dots) {
 				$key2 = substr($argv[$i], 0, $dots);
@@ -15,7 +15,7 @@
 		if ($str[$key]) {
 			echo "$str[$key]\n";
 		} else if ($str[$key] == "0") {
-			echo "0\n";
+			echo "0\n"; //fix bug with 0 ex "to" "to:0"
 		}
 	}
 ?>
