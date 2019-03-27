@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?php
-//check Parameters
+//check only 1 argument is on the menu
 if ($argc == 2) {
     $str = trim($argv[1]);
     ft_parse_do_op($str);
@@ -8,7 +8,7 @@ if ($argc == 2) {
     echo "Incorrect Parameters\n";
     exit(1);
 }
-//parsing
+// check format (number operator number)
 function ft_parse_do_op($str){
    // check operator and spread numbers
     if (strpos($str, "+")) {
