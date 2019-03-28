@@ -81,10 +81,42 @@ function	check_month($month) {
         'Novembre',
         'Décembre',
     ];
+    $month_lower_no_accent = [
+        'janvier',
+        'fevrier',
+        'mars',
+        'avril',
+        'mai',
+        'juin',
+        'juillet',
+        'aout',
+        'septembre',
+        'octobre',
+        'novembre',
+        'decembre',
+    ];
+    $month_upper_no_accent = [
+        'Janvier',
+        'Fevrier',
+        'Mars',
+        'Avril',
+        'Mai',
+        'Juin',
+        'Juillet',
+        'Aout',
+        'Septembre',
+        'Octobre',
+        'Novembre',
+        'Decembre',
+    ];
     if (in_array($month, $month_lower))
         $n_month = array_search($month, $month_lower) + 1;
     if (in_array($month, $month_upper))
         $n_month = array_search($month, $month_upper) + 1;
+    if (in_array($month, $month_lower_no_accent))
+        $n_month = array_search($month, $month_lower_no_accent) + 1;
+    if (in_array($month, $month_upper_no_accent))
+        $n_month = array_search($month, $month_upper_no_accent) + 1;
     return ($n_month);
 }
 // starting
