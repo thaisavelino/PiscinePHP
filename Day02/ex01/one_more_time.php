@@ -49,7 +49,6 @@ function	check_hour($hour) {
 	}
 }
 // Another way of doing it
-
 function	check_month($month) {
     //$month = strtolower($month);
     $n_month = 0;
@@ -125,7 +124,7 @@ if ($argc > 1) {
 	$date = explode(" ", $argv[1]);
 	//print_r($date);
 	if (count($date) != 5) {
-		echo "1 Wrong Format\n";
+		echo "Wrong Format\n";
 		exit ;
 	}
 	else {
@@ -160,7 +159,7 @@ if ($argc > 1) {
 		echo($timestamp);
 		echo "\n";
 	} else {
-		echo "2 Wrong Format\n";
+		echo "Wrong Format\n";
 		exit ;
 	} 
 }
