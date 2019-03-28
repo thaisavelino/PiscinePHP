@@ -3,7 +3,7 @@
 date_default_timezone_set('Europe/paris');
 $answer = array();
 $usr = get_current_user();
-//echo "user $user\n";
+echo "user $user\n";
 $file = file_get_contents("/var/run/utmpx");
 //echo "file $file\n";
 $sub = substr($file, 1256);
