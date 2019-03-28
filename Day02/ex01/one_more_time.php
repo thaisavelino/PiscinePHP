@@ -47,6 +47,7 @@ function	check_hour($hour) {
 	}
 }
 // Another way of doing it
+/*
 function	check_week($week) {
 	//lowercase to match it
 	$week = strtolower($week);
@@ -60,14 +61,17 @@ function	check_week($week) {
 		"dimanche"
 	];
 	return (in_array($week, $weekdays));
-}
+}*/
+
 // starting
 if ($argc > 1) {
 	//Check Format
 	$date = explode(" ", $argv[1]);
 	//print_r($date);
-	if (count($date) != 5)
-		echo "Wrong Format\n";
+	if (count($date) != 5) {
+		echo "1 Wrong Format\n";
+		exit ;
+	}
 	else {
 		//Take elements just to be readable
 		$week	= $date[0];
@@ -79,8 +83,10 @@ if ($argc > 1) {
 		echo "\n$week, $day, $month, $year, $hour\n";
 		//check all formats
 		$error = 0;
-		if (check_week($week) == 0)
-			$error = 1;
+		/*if (check_week($week) == 0)
+			$error = 1;*/
+		if (preg_match("/^([Ll]undi|[Mm]ardi|[Mm]ercredi|[Jj]eudi|[Vv]endredi|[Ss]amedi|[Dd]imanche)$/", $week) == 0)
+			$error = 1;		
 		if (preg_match("/^(0?[1-9]|[1-2][0-9]|3[0-1])$/", $day) == 0)
 			$error = 1;
 		$n_months = check_month($month);
@@ -99,7 +105,8 @@ if ($argc > 1) {
 		echo($timestamp);
 		echo "\n";
 	} else {
-		echo "Wrong Format\n";
+		echo "2 Wrong Format\n";
+		exit ;
 	} 
 }
 ?>
