@@ -75,25 +75,29 @@ if ($argc > 1) {
 		$month	= $date[2];
 		$year	= $date[3];
 		$hour	= $date[4];
-		// ** test.sh ** 
-		echo "$week, $day, $month, $year, $hour\n";
+		// ******************** test.sh ***************************  //
+		echo "\n$week, $day, $month, $year, $hour\n";
 		//check all formats
 		$error = 0;
 		if (check_week($week) == 0)
 			$error = 1;
 		if (preg_match("/^(0?[1-9]|[1-2][0-9]|3[0-1])$/", $day) == 0)
 			$error = 1;
-		if (check_month($month) == 0)
+		$n_months = check_month($month);
+		if ($n_months == 0)
 			$error = 1;
 		if (preg_match("/^([0-9]{4})$/", $year) == 0)
 			$error = 1;
 		if (check_hour($hour) == 0)
 			$error = 1;
+		else
+			$hour = explode(":", $hour);
+
 	}
 	if ($error == 0) {
 		$timestamp = mktime(intval($hour[0]),intval($hour[1]),intval($hour[2]),intval($n_months),intval($day),intval($year));
-		//$timestamp = mktime(intval($hour[0]),intval($hour[1]),intval($hour[2]),intval($n_month),intval($day),intval($year);
 		echo($timestamp);
+		echo "\n";
 	} else {
 		echo "Wrong Format\n";
 	} 
