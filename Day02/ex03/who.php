@@ -3,13 +3,11 @@
 date_default_timezone_set('Europe/paris');
 $answer = array();
 $usr = get_current_user();
-echo "user $user\n";
-$file = file_get_contents("/var/run/utmpx");
-//echo "file $file\n";
-$sub = substr($file, 1256);
-//echo "peace of the file $sub its binary so we need to unpack";
+$file = file_get_contents("/var/run/utmpx"); // READ ABOUT: utmpx process type
+// echo "file $file\n";// the file is binary so we need to unpack
+$sub = substr($file, 1256); // jump to the part you want, scape the header and shits
 $typedef = 'a256user/a4id/a32line/ipid/itype/I2time/a256host/i16pad';
-// while sub is not NULL so we got content yet
+// 5while sub is not NULL so we got content yet
 while ($sub != NULL)
 {
 	$array = unpack($typedef, $sub); // format
@@ -22,7 +20,7 @@ while ($sub != NULL)
 		$user = trim($array[user])." "; // print space after user
 		$answer = array_merge($answer, array($user.$term.$date)); // put all of them together to show
 	}
-	$sub = substr($sub, 628);;
+	$sub = substr($sub, 628); // go to next one i++
 }
 sort($answer);
 // print them all
