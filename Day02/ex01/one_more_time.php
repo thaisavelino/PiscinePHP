@@ -1,8 +1,6 @@
 #!/usr/bin/php
 <?PHP
-
-date_default_timezone_set ("Europe/Paris");
-
+date_default_timezone_set('Europe/Paris');
 function	check_month($month)
 {	
 	$n_month = 0;
@@ -67,18 +65,19 @@ function	check_week($week) {
 if ($argc > 1) {
 	//Check Format
 	$date = explode(" ", $argv[1]);
-	print_r($date);
+	//print_r($date);
 	if (count($date) != 5)
 		echo "Wrong Format\n";
 	else {
-		//Take elements and trim just in case
-		$week	= trim($date[0]);
-		$day	= trim($date[1]);
-		$month	= trim($date[2]);
-		$year	= trim($date[3]);
-		$hour	= trim($date[4]);
+		//Take elements just to be readable
+		$week	= $date[0];
+		$day	= $date[1];
+		$month	= $date[2];
+		$year	= $date[3];
+		$hour	= $date[4];
+		// ** test.sh ** 
 		echo "$week, $day, $month, $year, $hour\n";
-		//check formats
+		//check all formats
 		$error = 0;
 		if (check_week($week) == 0)
 			$error = 1;
@@ -91,8 +90,12 @@ if ($argc > 1) {
 		if (check_hour($hour) == 0)
 			$error = 1;
 	}
-	if ($error == 1) {
+	if ($error == 0) {
+		$timestamp = mktime(intval($hour[0]),intval($hour[1]),intval($hour[2]),intval($n_months),intval($day),intval($year));
+		//$timestamp = mktime(intval($hour[0]),intval($hour[1]),intval($hour[2]),intval($n_month),intval($day),intval($year);
+		echo($timestamp);
+	} else {
 		echo "Wrong Format\n";
-	}
+	} 
 }
 ?>
