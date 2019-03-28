@@ -4,29 +4,24 @@
 		you will have a folder google.com with all the images you got
 	*/
 // Threat errors
-function error($s, $argc)
+if (empty($argv[1]))
 {
-	if ($argc != 2)
-	{
-		//echo "[Warning] You must give one url\n";
-		return (1);
-	}
-	if (empty($s))
-	{
-		//echo "[Warning] You need to put the url\n";
-		return (1);
-	}
-	$yo = curl_init($s);
-	curl_setopt($yo, CURLOPT_RETURNTRANSFER, 1);
-	$exec = curl_exec($yo);
+	//echo "[Warning] You need to put the url\n";
+	return -1;
+}
+function error_curl($s, $argc)
+{
+	$test = curl_init($s);
+	curl_setopt($test, CURLOPT_RETURNTRANSFER, 1);
+	$exec = curl_exec($test);
 	if ($exec == FALSE)
 	{
 		//echo "[Error] curl cannot access this url, check the address again.\n";
 		return (1);
 	}
-	curl_close($yo);
+	curl_close($test);
 }
-if (error($argv[1], $argc))
+if (error_curl($argv[1], $argc))
 	return -1;
 if ($argc == 2)
 {
@@ -46,19 +41,21 @@ if ($argc == 2)
 		array_push($imgs, $elem);// then take all the things and put in array imgs
 	}
 	$stack = explode("/", $argv[1]);
-	$name_ofdir = $stack[2]; //take whats after http://
-	$name_ofdir = dirname(__FILE__)."/".$name_ofdir;// dirname is the name  of the folder we are and and name it as /[content at name_ofdir]
-	if (!file_exists($name_ofdir))
-		mkdir($name_ofdir);
-	foreach ($imgs as $swag)
+	$dirname = $stack[2]; //take whats after http://
+	$dirname = dirname(__FILE__)."/".$dirname;// dirname is the name  of the folder we are and and name it as /[content at name_ofdir]
+	if (!file_exists($dirname))
+		mkdir($dirname);
+	foreach ($imgs as $i)
 	{
-		$fd = curl_init($swag);
+		$fd = curl_init($i);
 		curl_setopt($fd, CURLOPT_RETURNTRANSFER, 1);
 		$str = curl_exec($fd);
-		$stack = explode("/", $swag);
-		$name_ofile = $stack[count($stack) - 1];
-		file_put_contents($name_ofdir."/".$name_ofile, $str);
+		$stack = explode("/", $i);
+		$filename = $stack[count($stack) - 1];
+		file_put_contents($dirname."/".$filename, $str);
 		curl_close($fd);
 	}
+} else {
+	return -1;
 }
 ?>
