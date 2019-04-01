@@ -35,9 +35,10 @@ or using curl command is the same:
 For day 05 we must install [MAMP](https://bitnami.com/stack/mamp/installer). During the instalation we don't need all the options Just PHP My Admin.
 
 **Runing MAMP**
-1. To run MAMP you must run manager-osx following this path: **MAMP** > **licences** > manager-osx
-2. Then click on **Manage Servers** start both Apache and MySQL
-note: If you click on **configure** you can change the PORT
+1. To run MAMP you must run **manager-osx** located at the folder **MAMP**
+2. Then click on **Manage Servers** to start both Apache and MySQL
+
+***note:** If you click on **configure** you can change the PORT*
 
 **How start using PHPmyAdmin**
 Just put in your browser localhost, the PORT number and phpmyadmin as:
