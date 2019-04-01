@@ -1,12 +1,12 @@
 # PiscinePHP
 A 42 challenge
 
-# How to use it
+Here I put some tips for you do your projects and don't loose time.
 
-## Running a Severver for PHP projects
+## Running PHP Server
 After Day03 we need a webserver to run our projects. The first exercize is to configure a Server using PAMP.
 
-### ex00 - Configure the server
+**ex00 - Configure the server**
 
 The PAMP is like a LAMP from school but its not working.
 
