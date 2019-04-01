@@ -1,11 +1,12 @@
 # PiscinePHP
 A 42 challenge
 
-# How to use it
+Here I put some tips for you do your projects and don't loose time.
 
-## Day03
+## Running PHP Server
+After Day03 we need a webserver to run our projects. The first exercize is to configure a Server using PAMP.
 
-### ex00 - Configure the server
+**ex00 - Configure the server**
 
 The PAMP is like a LAMP from school but its not working.
 
@@ -22,7 +23,7 @@ So we must use 0.0.0.0
 Another option is using Docker:
 `docker run -v $PATH_FOR_YOUR_PROJECT:/var/www/html -p 8100:80 --restart=always lioshi/lamp:php5`
 
-**Testing project**
+**Testing your roject**
 
 Like we did in Docker-1 project, you must access your project using the browser and selecting the folders with exercizes and the page you want to access:
 `http://eXrXpX.42.fr:8100/ex01/phpinfo.php`
@@ -30,4 +31,26 @@ Like we did in Docker-1 project, you must access your project using the browser 
 or using curl command is the same:
 `curl http://eXrXpX.42.fr:8100/ex01/phpinfo.php`
 
+## MySQL SERVER
+For day 05 we must install [MAMP](https://bitnami.com/stack/mamp/installer). During the instalation we don't need all the options Just PHP My Admin.
+
+**Runing MAMP**
+1. To run MAMP you must run **manager-osx** located at the folder **MAMP**
+2. Then click on **Manage Servers** to start both Apache and MySQL
+
+***note:** If you click on **configure** you can change the PORT*
+
+**How start using PHPmyAdmin**
+
+Just put in your browser localhost, the PORT number and phpmyadmin as:
+`http://localhost:8080/phpmyadmin/`
+
+**Where put your Website**
+
+Your website must be at **apache2** > **htdocs** folder.
+Then you can see it in your broser, for example:
+
+`http://localhost:8080`
+
+By default it comes with a welcome page from bitnami.. but you can delete it and put your own website.
 
