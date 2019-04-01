@@ -41,10 +41,12 @@ For day 05 we must install [MAMP](https://bitnami.com/stack/mamp/installer). Dur
 ***note:** If you click on **configure** you can change the PORT*
 
 **How start using PHPmyAdmin**
+
 Just put in your browser localhost, the PORT number and phpmyadmin as:
 `http://localhost:8080/phpmyadmin/`
 
 **Where put your Website**
+
 Your website must be at **apache2** > **htdocs** folder.
 Then you can see it in your broser, for example:
 
