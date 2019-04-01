@@ -3,7 +3,8 @@ A 42 challenge
 
 # How to use it
 
-## Day03
+## Running a Severver for PHP projects
+After Day03 we need a webserver to run our projects. The first exercize is to configure a Server using PAMP.
 
 ### ex00 - Configure the server
 
@@ -22,7 +23,7 @@ So we must use 0.0.0.0
 Another option is using Docker:
 `docker run -v $PATH_FOR_YOUR_PROJECT:/var/www/html -p 8100:80 --restart=always lioshi/lamp:php5`
 
-**Testing project**
+**Testing your roject**
 
 Like we did in Docker-1 project, you must access your project using the browser and selecting the folders with exercizes and the page you want to access:
 `http://eXrXpX.42.fr:8100/ex01/phpinfo.php`
@@ -30,7 +31,7 @@ Like we did in Docker-1 project, you must access your project using the browser 
 or using curl command is the same:
 `curl http://eXrXpX.42.fr:8100/ex01/phpinfo.php`
 
-## Day 05
+## MySQL SERVER
 For day 05 we must install [MAMP](https://bitnami.com/stack/mamp/installer). During the instalation we don't need all the options Just PHP My Admin.
 
 **Runing MAMP**
