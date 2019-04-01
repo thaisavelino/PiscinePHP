@@ -31,4 +31,13 @@ or using curl command is the same:
 `curl http://eXrXpX.42.fr:8100/ex01/phpinfo.php`
 
 ## Day 05
-For day 05 we must install [MAMP](https://bitnami.com/stack/mamp/installer).
+For day 05 we must install [MAMP](https://bitnami.com/stack/mamp/installer). During the instalation we don't need all the options Just PHP My Admin.
+
+**Runing MAMP**
+1. To run MAMP you must run manager-osx following this path: **MAMP** > **licences** > manager-osx
+2. Then click on **Manage Servers** start both Apache and MySQL
+**Where put your Website**
+Your website must be at **apache2** > **htdocs** folder.
+Then you can see it at:
+
+
