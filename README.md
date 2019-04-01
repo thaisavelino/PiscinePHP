@@ -36,8 +36,17 @@ For day 05 we must install [MAMP](https://bitnami.com/stack/mamp/installer). Dur
 **Runing MAMP**
 1. To run MAMP you must run manager-osx following this path: **MAMP** > **licences** > manager-osx
 2. Then click on **Manage Servers** start both Apache and MySQL
+note: If you click on **configure** you can change the PORT
+
+**How start using PHPmyAdmin**
+Just put in your browser localhost, the PORT number and phpmyadmin as:
+`http://localhost:8080/phpmyadmin/`
+
 **Where put your Website**
 Your website must be at **apache2** > **htdocs** folder.
-Then you can see it at:
+Then you can see it in your broser, for example:
 
+`http://localhost:8080`
+
+By default it comes with a welcome page from bitnami.. but you can delete it and put your own website.
 
