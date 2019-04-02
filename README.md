@@ -1,7 +1,7 @@
 # PiscinePHP
 A 42 challenge
 
-Here I put some tips for you do your projects and don't loose time.
+*Here I put some tips for you do your projects and don't loose time to start. But after piscine is better learn more about Server. Good Luck!* =)
 
 ## Running PHP Server
 After Day03 we need a webserver to run our projects. The first exercize is to configure a Server using PAMP.
