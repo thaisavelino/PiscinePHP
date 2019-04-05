@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <style>
+            body {
+                background: url(http://www.inkspilldesign.com/demo/wood-tile-background.jpg);
+                background-color: #14cfe2;
+                /* * Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a7cfdf+0,23538a+100;Blue+3d+%238 */
+                background: #a7cfdf; /* Old browsers */
+                background: -moz-linear-gradient(top, #a7cfdf 0%, #23538a 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, #a7cfdf 0%,#23538a 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, #a7cfdf 0%,#23538a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            }
+
+            .container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw;
+            }
+
+            #container {
+                width: 255px;
+                padding: 8px 8px 20px 8px;
+                margin: 20px auto;
+                background-color: #ffd1f1;
+                border-radius: 4px;
+                border-top: 2px solid #FFF;
+                border-right: 2px solid #FFF;
+                border-bottom: 2px solid #d4d4d4;
+                border-left: 2px solid #d4d4d4;
+                box-shadow: -3px 3px 7px rgba(0, 0, 0, .6), inset -100px 0px 100px rgba(255, 255, 255, .5);
+            }
+
+            #display {
+                display: block;
+                margin: 15px auto;
+                height: 42px;
+                width: 100%;
+                padding: 0 10px;
+                border-radius: 4px;
+                border-top: 2px solid #C1C1C1;
+                border-right: 2px solid #C1C1C1;
+                border-bottom: 2px solid #FFF;
+                border-left: 2px solid #FFF;
+                background-color: #FFF;
+                font-size: 25px;
+                color: #666;
+                text-align: right;
+                font-weight: 400;
+            }
+
+            .button {
+                display: inline-block;
+                margin: 2px;
+                width: 42px;
+                height: 42px;
+                font-size: 16px;
+                font-weight: bold;
+                border-radius: 4px;
+            }
+            span {
+                display: inline-block;
+                margin: 2px;
+                width: 42px;
+                font-size: 16px;
+                font-weight: bold;
+                border-radius: 4px;
+            }
+            #clearButton {
+                margin: 2px 2px 6px 2px;
+                color: #FFF;
+                text-shadow: -1px -1px 0px #ea78e7;
+                background-color: #ea78e7;
+                border-top: 2px solid #d4d4d4;
+                border-right: 2px solid #d4d4d4;
+                border-bottom: 2px solid #181818;
+                border-left: 2px solid #181818;
+                box-shadow: 0px 0px 2px #c31ebf, inset 0px -20px 1px #c31ebf;
+            }
+
+            .digits {
+                color: #181818;
+                text-shadow: 1px 1px 0px #FFF;
+                background-color: #EBEBEB;
+                border-top: 2px solid #FFF;
+                border-right: 2px solid #FFF;
+                border-bottom: 2px solid #C1C1C1;
+                border-left: 2px solid #C1C1C1;
+                border-radius: 4px;
+                box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #DCDCDC;
+            }
+            .digits:hover {
+                background-color: #d4d4d4;
+                box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #c1c1c1;
+            }
+
+            .mathButtons:hover {
+                background-color: #2fb9c7;
+                box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #107b86;
+            }
+            
+            #clearButton:hover {
+                background-color: #d47ad1;
+                box-shadow: 0px 0px 2px #7b638a, inset 0px -20px 1px #b12aad;
+            }
+            .digits:active,
+            .mathButtons:active,
+            #clearButton:active {
+                background-color: rgba(0, 0, 0, .2);
+                box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1), inset 0px -20px 1px rgba(150, 150, 150, 0.1);
+            }
+            .mathButtons {
+                color: #FFF;
+                text-shadow: -1px -1px 0px #14cfe2;
+                background-color: #36d2e2;
+                border-top: 2px solid #aff8ff;
+                border-right: 2px solid #aff8ff;
+                border-bottom: 2px solid #007480;
+                border-left: 2px solid #007480;
+                box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #089ead;
+            }
+            .equal {
+                width: 55%;
+            }
+            </style>
+    </head>
+<body>
+    <div class="container">
+        <fieldset id="container">
+            <form name="calculator">
+    
+                <input id="display" type="text" name="display" readonly>
+    
+                <input class="button digits" type="button" value="7" onclick="calculator.display.value += '7'">
+                <input class="button digits" type="button" value="8" onclick="calculator.display.value += '8'">
+                <input class="button digits" type="button" value="9" onclick="calculator.display.value += '9'">
+                <input class="button mathButtons" type="button" value="+" onclick="calculator.display.value += ' + '">
+                <span class="empty"></span>
+                
+                <br>
+                <input class="button digits" type="button" value="4" onclick="calculator.display.value += '4'">
+                <input class="button digits" type="button" value="5" onclick="calculator.display.value += '5'">
+                <input class="button digits" type="button" value="6" onclick="calculator.display.value += '6'">
+                <input class="button mathButtons" type="button" value="x" onclick="calculator.display.value += ' * '">
+                <input class="button mathButtons" type="button" value="/" onclick="calculator.display.value += ' / '">
+                
+                <br>
+                <input class="button digits" type="button" value="1" onclick="calculator.display.value += '1'">
+                <input class="button digits" type="button" value="2" onclick="calculator.display.value += '2'">
+                <input class="button digits" type="button" value="3" onclick="calculator.display.value += '3'">
+                <input class="button mathButtons" type="button" value="%" onclick="calculator.display.value += ' % '")>
+                <input class="button mathButtons" type="button" value="-" onclick="calculator.display.value += ' - '">
+                
+                <br>
+                <input id="clearButton" class="button" type="button" value="C" onclick="calculator.display.value = ''">
+                <input class="button digits" type="button" value="0" onclick="calculator.display.value += '0'">
+                <input class="button mathButtons equal" type="button" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
+
+            </form>
+        </fieldset>
+    </div>
+</body>
+</html>
