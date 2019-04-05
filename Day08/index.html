@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Naval Battle</title>
+		<link rel="stylesheet" href="assets/css/estilos.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		
+		<script src="assets/js/class.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/js/game.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			var t, t2;
+			$(function(){
+				
+				t = new Tabuleiro('#canvas-player > div');
+				t.adicionarEmbarcacaoAleatoria(new PortaAviao());
+				t.adicionarEmbarcacaoAleatoria(new PortaAviao());
+				t.adicionarEmbarcacaoAleatoria(new Encouracado());
+				t.adicionarEmbarcacaoAleatoria(new Hidroaviao());
+				t.adicionarEmbarcacaoAleatoria(new Cruzador());
+				t.adicionarEmbarcacaoAleatoria(new Submarino());
+				t.adicionarEmbarcacaoAleatoria(new Submarino());
+				t.adicionarEmbarcacaoAleatoria(new Submarino());
+				t.setPlayer(new Player('jogador'));
+				
+				t2 = new Tabuleiro('#canvas-cpu > div');
+				t2.adicionarEmbarcacaoAleatoria(new PortaAviao());
+				t2.adicionarEmbarcacaoAleatoria(new PortaAviao());
+				t2.adicionarEmbarcacaoAleatoria(new Encouracado());
+				t2.adicionarEmbarcacaoAleatoria(new Hidroaviao());
+				t2.adicionarEmbarcacaoAleatoria(new Cruzador());
+				t2.adicionarEmbarcacaoAleatoria(new Submarino());
+				t2.adicionarEmbarcacaoAleatoria(new Submarino());
+				t2.adicionarEmbarcacaoAleatoria(new Submarino());
+				t2.exibirEmbarcacoes(false);
+				t2.setPlayer(new CPU('computador'));
+				
+				BatalhaNaval.setup(t, t2, $('#log'));
+				
+			});
+			
+			function logDeTiros(evt, coord, result){
+				console.log(evt.currentTarget);
+				$('#log').append('Result: ' + result + ', row: '+coord.linha+', col: '+coord.coluna+'<br />');
+			}
+			
+		</script>
+		
+		
+		
+	</head>
+	<body>
+		<div class="howto">
+			<h2>How to play</h2>
+			<ul>
+				<li>Each Player can try 3 shoots each thime</li>
+				<li>Who sunk all ships from the other wins</li>
+				<li> You need to click on "Computer area"</li>
+			</ul>		
+		</div>
+		<div id="canvas-player">
+			<h1>Payer area</h1>
+			<div></div>
+		</div>
+		
+		<div id="canvas-cpu">
+			<h1>Computer Area</h1>
+			<div></div>
+		</div>
+		
+		<div id="log">
+			<h3>Game Log</h3>
+			
+			
+		</div>
+		
+	</body>
+</html>

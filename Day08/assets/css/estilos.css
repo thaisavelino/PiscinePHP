@@ -1,0 +1,83 @@
+@CHARSET "UTF-8";
+
+html, body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	/*background-image: url("../images/background-sea.jpg");*/
+	background-image: url("../images/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+body {
+	margin-left: 200px;
+}
+
+#canvas-player div, #canvas-cpu div {
+	position:relative;
+}
+#canvas-player, #canvas-cpu {
+	float: left;
+	background-color: rgba(255,255,255,0.3);
+}
+.howto, #log {
+	
+	color: white;
+}
+
+#canvas-cpu {
+	float: left;
+}
+
+.x-letra-topo, .x-letra-linha {
+	text-align: center;
+	background-color: #FFFFFF;
+}
+
+.x-celula {
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+} 
+
+.x-embarcacao {
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.cruzador {
+	background-image: URL(../images/cruzador.gif);
+}
+
+.encouracado {
+	background-image: URL(../images/encouracado.gif);
+}
+
+.hidroaviao {
+	background-image: URL(../images/hidroaviao.gif);
+}
+
+.porta-aviao {
+	background-image: URL(../images/porta-aviao.gif);
+}
+
+.submarino {
+	background-image: URL(../images/submarino.gif);
+}
+
+.tiro_agua {
+	background-color: #00adff;
+}
+
+.tiro_acerto {
+	background-color: #FFCC00;
+}
+.x-derrubado {
+	background-color: #ff00d4;
+}
+
+#log {
+	height: 300px;
+	overflow: auto;
+	float: left;
+	padding-left: 10px;
+}
+
