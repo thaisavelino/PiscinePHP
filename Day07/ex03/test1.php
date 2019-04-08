@@ -26,7 +26,7 @@ class HouseMartell extends House {
 	}
 }
 
-$houses = Array(new HouseStark(), new HouseMartell());
+$houses = Array(new HouseStark(), new HouseMartell()); // Array of objects
 
 foreach ($houses as $house) {
 	$house->introduce();
