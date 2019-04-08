@@ -39,16 +39,16 @@ class Llama {
 	}
 }
 
-$uf = new UnholyFactory();	// Create a absorb function to UnholyFactory class
-$uf->absorb(new Footsoldier());  //output: (Factory absorbed a fighter of type foot soldier)
-$uf->absorb(new Footsoldier()); // output: (Factory already absorbed a fighter of type foot soldier)
-$uf->absorb(new Archer()); // output: (Factory absorbed a fighter of type archer)
-$uf->absorb(new Assassin());//(Factory absorbed a fighter of type assassin)
-$uf->absorb(new Llama()); // output: (Factory can't absorb this, it's not a fighter)
+$uf = new UnholyFactory(); // Create a absorb function to UnholyFactory class
+$uf->absorb(new Footsoldier()); // output: (Factory absorbed a fighter of type foot soldier)
+$uf->absorb(new Footsoldier()); // output: (Factory ALREADY absorbed a fighter of type foot soldier)
+$uf->absorb(new Archer()); 		// output: (Factory absorbed a fighter of type archer)
+$uf->absorb(new Assassin());	// output: (Factory absorbed a fighter of type assassin)
+$uf->absorb(new Llama()); 		// output: (Factory CANT absorb this, it's not a fighter)
 
-$requested_fighters = Array( 	//outputs para o foreach li embaixo:
+$requested_fighters = Array( //outputs para o foreach li em baixo:
 	"foot soldier",				// (Factory fabricates a fighter of type foot soldier)
-	"llama",					//(Factory hasn't absorbed any fighter of type llama)
+	"llama",					// (Factory hasn't absorbed any fighter of type llama)
 	"foot soldier",				// (Factory fabricates a fighter of type foot soldier)
 	"archer",					// (Factory fabricates a fighter of type archer)
 	"foot soldier",				// (Factory fabricates a fighter of type foot soldier)
