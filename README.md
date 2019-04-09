@@ -72,6 +72,6 @@ By default it comes with a welcome page from bitnami.. but you can delete it and
 	ex13: OK
 	ex14: OK
 	ex15: OK
-	ex16: KO
-Grade: 80
+	ex16: **KO**
+**Grade: 80**
 
